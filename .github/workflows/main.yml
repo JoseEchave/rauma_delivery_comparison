@@ -1,0 +1,28 @@
+
+name: get_delivery_info
+
+on:
+  schedule:
+    - cron: '15 5,7,9,11,13,16,17 * * *'  # Daily at different times (UTC, +3 hours in finland)
+
+jobs:
+  londonmapbot-post:
+    runs-on: macOS-latest
+    env:
+      FOODORA_DPS_SESSION_ID: ${{ secrets.FOODORA_DPS_SESSION_ID }}
+      INTERCOM_ID: ${{ secrets.INTERCOM_ID }}
+      RAVELIN_DEVICE_ID: ${{ secrets.RAVELIN_DEVICE_ID }}
+      WOLT_RCOOKIE: ${{ secrets.WOLT_RCOOKIE }}
+      _GA: ${{ secrets._GA }}
+      _GCL_AU: ${{ secrets._GCL_AU }} 
+    steps:
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@master
+      - name: Install httr package
+        run: Rscript -e 'install.packages("httr", dependencies = TRUE)'
+      - name: Install purrr package
+        run: Rscript -e 'install.packages("purrr", dependencies = TRUE)'
+      - name: Install lubridate package
+        run: Rscript -e 'install.packages("lubridate", dependencies = TRUE)'
+      - name: Save Wolt and Foodora delivery info to csv
+        run: Rscript source.R
