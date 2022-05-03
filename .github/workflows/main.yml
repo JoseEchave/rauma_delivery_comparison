@@ -6,7 +6,7 @@ on:
     - cron: '15 5,7,9,11,13,16,17 * * *'  # Daily at different times (UTC, +3 hours in finland)
 
 jobs:
-  londonmapbot-post:
+  rauma_bot:
     runs-on: macOS-latest
     env:
       FOODORA_DPS_SESSION_ID: ${{ secrets.FOODORA_DPS_SESSION_ID }}
@@ -20,9 +20,18 @@ jobs:
       - uses: r-lib/actions/setup-r@master
       - name: Install httr package
         run: Rscript -e 'install.packages("httr", dependencies = TRUE)'
-      - name: Install purrr package
-        run: Rscript -e 'install.packages("purrr", dependencies = TRUE)'
       - name: Install lubridate package
         run: Rscript -e 'install.packages("lubridate", dependencies = TRUE)'
       - name: Save Wolt and Foodora delivery info to csv
         run: Rscript source.R
+       # Add new files in data folder, commit along with other modified files, push
+      - name: Commit files
+        run: |
+          git config --local user.name actions-user
+          git config --local user.email "actions@github.com"
+          git add output/*
+          git commit -am "Add data for $(date)"
+          git push origin main
+        env:
+          REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+          username: github-actions
