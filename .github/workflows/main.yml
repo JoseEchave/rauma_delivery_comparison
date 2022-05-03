@@ -27,11 +27,14 @@ jobs:
       - name: Save Wolt and Foodora delivery info to csv
         run: Rscript source.R
        # Add new files in data folder, commit along with other modified files, push
-      - name: Commit files
+      - name: setup git config
         run: |
-          git config --local user.name actions-user
-          git config --local user.email "actions@github.com"
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+      - name: commit
+        run: |
+          # Stage the file, commit and push
           git add output/*
-          git commit -am "Add data for $(date)"
+          git commit -m "Add data for $(date)"
           git push origin main
-
