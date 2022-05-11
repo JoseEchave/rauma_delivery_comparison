@@ -1190,3 +1190,23 @@
 "Amarillo Rauma","Savilankatu 1","€2.90","35","FALSE",2022-05-11 16:00:00
 "Pizza & Buffa Prisma Rauma","Porintie 4","€3.90","45","FALSE",2022-05-11 16:00:00
 "Hesburger Rauma Prisma","Porintie 4","€3.90","25","FALSE",2022-05-11 16:00:00
+"name","address","delivery_price","estimate","online","time_retreived"
+"McDonald's Rauma","Karjalankatu 1","€3.90","20","TRUE",2022-05-11 17:00:00
+"Hesburger Nortamonkatu Rauma","Nortamonkatu 3","€2.90","20","TRUE",2022-05-11 17:00:00
+"Deniss Kebab Rauma","Valtakatu 10","€2.90","20","TRUE",2022-05-11 17:00:00
+"Ravintola Damla Rauma","Syväraumankatu 5A","€2.90","20","TRUE",2022-05-11 17:00:00
+"Antalya Kebab-Pizzeria Rauma","Valtakatu 4","€2.90","20","TRUE",2022-05-11 17:00:00
+"Café Sali Rauma","Kuninkaankatu 22","€3.90","15","TRUE",2022-05-11 17:00:00
+"Wen Jing Rauma","Kauppakatu 11","€2.90","20","TRUE",2022-05-11 17:00:00
+"Ravintola Dimashki Rauma","Töyryntie 2","€2.90","20","TRUE",2022-05-11 17:00:00
+"Kebab Pizzeria Selin","Pyyvahe 1","€4.90","30","TRUE",2022-05-11 17:00:00
+"Chef's Kebab Pizzeria","Monnankatu 34 ","€2.00","45","TRUE",2022-05-11 17:00:00
+"Wanhan Rauman KaffeBar","Kuninkaankatu 27","€3.90","20","FALSE",2022-05-11 17:00:00
+"Nepalilainen Ravintola Everest Himal Rauma","Kuninkaankatu 19","€3.90","25","FALSE",2022-05-11 17:00:00
+"Ravintola Mr.Jones Rauma","Valtaakatu 5","€2.90","25","TRUE",2022-05-11 17:00:00
+"Ravintola Tokio Sushi Rauma","Kiviniemenkatu 2","€2.90","25","FALSE",2022-05-11 17:00:00
+"Ravintola Kara","Lahdenkatu 5-7","€5.90","35","FALSE",2022-05-11 17:00:00
+"Amarillo Rauma","Savilankatu 1","€2.90","30","FALSE",2022-05-11 17:00:00
+"Pizza Cartel Rauma","This is a virtual venue","€5.90","35","FALSE",2022-05-11 17:00:00
+"Pizza & Buffa Prisma Rauma","Porintie 4","€3.90","40","FALSE",2022-05-11 17:00:00
+"Hesburger Rauma Prisma","Porintie 4","€3.90","25","FALSE",2022-05-11 17:00:00
